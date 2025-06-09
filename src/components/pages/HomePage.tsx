@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { GithubIcon, LinkedinIcon, FacebookIcon, MailIcon, MessageCircleIcon} from 'lucide-react'
 import { useTheme } from '../../contexts/ThemeContext'
-interface HomePageProps {
-  onNavigateToContact: () => void
-}
-export const HomePage: React.FC<HomePageProps> = ({ onNavigateToContact }) => {
+// interface HomePageProps {
+//   onNavigateToContact: () => void
+// }
+// export const HomePage: React.FC<HomePageProps> = ({ onNavigateToContact }) => {
+export const HomePage: React.FC = () => {
   const { theme } = useTheme()
   const [displayText, setDisplayText] = useState('')
   const [roleIndex, setRoleIndex] = useState(0)
@@ -251,7 +252,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigateToContact }) => {
                 delay: 1.2,
               }}
             >
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.label}
                   href={link.url}

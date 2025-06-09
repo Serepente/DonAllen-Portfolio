@@ -270,7 +270,7 @@ export const ContactPage: React.FC = () => {
           <div>
             <ReCAPTCHA
               sitekey="6Lc0n1orAAAAAPn-JnjM3RT4xdRlNaZCsvhnwavP"
-              onChange={(token) => setRecaptchaToken(token)}
+              onChange={(token: string | null) => setRecaptchaToken(token)}
               theme={theme}
             />
           </div>

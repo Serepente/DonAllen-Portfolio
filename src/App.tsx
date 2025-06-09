@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Navigation } from './components/Navigation'
 import { ThemeSelector } from './components/ThemeSelector'
 import { HomePage } from './components/pages/HomePage'
@@ -6,17 +6,17 @@ import { SkillsPage } from './components/pages/SkillsPage'
 import { NextChapter } from './components/NextChapter'
 import { AboutPage } from './components/pages/AboutPage'
 import { ServicesPage } from './components/pages/ServicesPage'
-import { FactsPage } from './components/pages/FactsPage'
+// import { FactsPage } from './components/pages/FactsPage'
 import { ExperiencesPage } from './components/pages/ExperiencesPage'
-import { ReferencesPage } from './components/pages/ReferencesPage'
+// import { ReferencesPage } from './components/pages/ReferencesPage'
 import { ProjectsPage } from './components/pages/ProjectsPage'
-import { TestimonialsPage } from './components/pages/TestimonialsPage'
+// import { TestimonialsPage } from './components/pages/TestimonialsPage'
 import { ContactPage } from './components/pages/ContactPage'
 import { ResumePage } from './components/pages/ResumePage'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useTheme } from './contexts/ThemeContext'
-import { Logo } from './components/logo'
+import { Logo } from './components/Logo'
 const AppContent = () => {
   const [activePage, setActivePage] = useState(1)
   const { theme } = useTheme()
@@ -72,7 +72,7 @@ const AppContent = () => {
       component: <ContactPage />,
     },
   ]
-  const handlePageChange = (pageId) => {
+  const handlePageChange = (pageId: number) => {
     setActivePage(pageId)
   }
   const goToNextChapter = () => {
